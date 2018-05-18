@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+def config = rootProject.ext.android
+def library = rootProject.ext.dependencies
+android {
+    compileSdkVersion config["compileSdkVersion"]
+
+    defaultConfig {
+        applicationId "com.sequoia.baoku"
+        minSdkVersion config["minSdkVersion"]
+        targetSdkVersion config["targetSdkVersion"]
+        versionCode config["versionCode"]
+        versionName config["versionName"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation library["junit"]
+    androidTestImplementation library["runner"]
+    androidTestImplementation library["espresso_core"]
+    //第三方引用 请查看 config.gradle 文件
+    implementation library["appcompat"]
+    implementation library["constraint"]
+    implementation library["statusbarutil"]
+    implementation library["retrofit"]
+    implementation library["okhttp"]
+    implementation library["urlconnection"]
+    implementation library["retrofit_gson"]
+    implementation library["butterKnife"]
+    implementation library["butterknife_compiler"]
+    //轮播
+    implementation library["roll_view_pager"]
+    //图片加载
+    implementation library["glide"]
+    annotationProcessor library["glide_compiler"]
+    //recyclerview
+    implementation library["recycler_view"]
+    implementation library["card_view"]
+    implementation library["baseRecyclerViewAdapterHelper"]
+    implementation library["circleimg"]
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.1.1'
+}

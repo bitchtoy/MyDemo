@@ -1,0 +1,58 @@
+ext{
+    android= [
+            compileSdkVersion : 26,
+            minSdkVersion :17,
+            targetSdkVersion: 26,
+            versionCode : 1,
+            versionName : "1.0",
+
+    ]
+    version = [
+            junit : "4.12",
+            runner : "1.0.1",
+            espresso_core : "3.0.1",
+            supportAppcompat : "26.1.0",
+            statusBarUtils : "1.5.0",
+            constraintLayout : "1.1.0",
+            okhttp : "3.8.1",
+            retrofit : "2.3.0",
+            butterKnife : "8.8.1",
+            rollViewPager:"1.4.6",
+            glide : "4.7.1",
+            baseRecyclerViewAdapterHelper : "2.9.30",
+            circleimg: "2.2.0"
+    ]
+    dependencies = [
+            //系统配置
+            junit :"junit:junit:${version["junit"]}" ,
+            runner :"com.android.support.test:runner:${version["runner"]}" ,
+            espresso_core : "com.android.support.test.espresso:espresso-core:${version["espresso_core"]}",
+            appcompat : "com.android.support:appcompat-v7:${version["supportAppcompat"]}",
+
+            constraint : "com.android.support.constraint:constraint-layout:${version["constraintLayout"]}",
+            //title bar
+            statusbarutil : "com.jaeger.statusbarutil:library:${version["statusBarUtils"]}",
+            //网络请求
+            retrofit : "com.squareup.retrofit2:retrofit:${version["retrofit"]}",
+            okhttp : "com.squareup.okhttp3:okhttp:${version["okhttp"]}" ,
+            urlconnection : "com.squareup.okhttp3:okhttp-urlconnection:${version[ "okhttp"]}",
+            //数据解析
+            retrofit_gson : "com.squareup.retrofit2:converter-gson:${version["retrofit"]}",
+            //butter knife
+            butterKnife : "com.jakewharton:butterknife:${version["butterKnife"]}",
+            butterknife_compiler : "com.jakewharton:butterknife-compiler:${version["butterKnife"]}",
+            //轮播
+            roll_view_pager : "com.jude:rollviewpager:${version["rollViewPager"]}",
+            //图片加载
+            glide : "com.github.bumptech.glide:glide:${version["glide"]}",
+            glide_compiler : "com.github.bumptech.glide:compiler:${version["glide"]}",
+            //recycler view
+            recycler_view : "com.android.support:recyclerview-v7:${version["supportAppcompat"]}",
+            card_view : "com.android.support:cardview-v7:${version["supportAppcompat"]}",
+            baseRecyclerViewAdapterHelper : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${version["baseRecyclerViewAdapterHelper"]}",
+            circleimg: "de.hdodenhof:circleimageview:${version["circleimg"]}",
+
+    ]
+
+
+}
